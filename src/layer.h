@@ -26,6 +26,8 @@
 #include "pipeline.h"
 #endif // NCNN_VULKAN
 
+#include <iostream>
+
 namespace ncnn {
 
 class NCNN_EXPORT Layer
