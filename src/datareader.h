@@ -20,6 +20,8 @@
 #include <stdio.h>
 #endif
 
+#include <iostream>
+
 #if NCNN_PLATFORM_API
 #if __ANDROID_API__ >= 9
 #include <android/asset_manager.h>

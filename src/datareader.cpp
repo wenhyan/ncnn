@@ -50,6 +50,7 @@ public:
     DataReaderFromStdioPrivate(FILE* _fp)
         : fp(_fp)
     {
+        std::cout << "DataReaderFromStdioPrivate\n";
     }
     FILE* fp;
 };
@@ -57,6 +58,7 @@ public:
 DataReaderFromStdio::DataReaderFromStdio(FILE* _fp)
     : DataReader(), d(new DataReaderFromStdioPrivate(_fp))
 {
+    std::cout << "new DataReaderFromStdioPrivate\n";
 }
 
 DataReaderFromStdio::~DataReaderFromStdio()

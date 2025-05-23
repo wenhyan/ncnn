@@ -1364,6 +1364,8 @@ int Net::load_param(const DataReader& dr)
     int blob_count = 0;
     SCAN_VALUE("%d", layer_count)
     SCAN_VALUE("%d", blob_count)
+    std::cout << "layer_count = " << layer_count << std::endl;
+    std::cout << "blob_count = " << blob_count << std::endl;
     if (layer_count <= 0 || blob_count <= 0)
     {
         NCNN_LOGE("invalid layer_count or blob_count");
@@ -1441,6 +1443,11 @@ int Net::load_param(const DataReader& dr)
         SCAN_VALUE("%255s", layer_name)
         SCAN_VALUE("%d", bottom_count)
         SCAN_VALUE("%d", top_count)
+
+        std::cout << "layer_type = " << layer_type << std::endl;
+        std::cout << "layer_name = " << layer_name << std::endl;
+        std::cout << "bottom_count = " << bottom_count << std::endl;
+        std::cout << "top_count = " << top_count << std::endl;
 
         Layer* layer = create_overwrite_builtin_layer(layer_type);
 #if NCNN_VULKAN
@@ -2390,6 +2397,7 @@ Layer* Net::create_custom_layer(const char* type)
 Layer* Net::create_overwrite_builtin_layer(const char* type)
 {
     int typeindex = layer_to_index(type);
+    std::cout << "typeindex == " << typeindex << std::endl;  
     if (typeindex == -1)
         return 0;
 

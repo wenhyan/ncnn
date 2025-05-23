@@ -20,6 +20,7 @@
 #include "mat.h"
 #include "option.h"
 #include "platform.h"
+#include <iostream>
 
 #if NCNN_PLATFORM_API
 #if __ANDROID_API__ >= 9

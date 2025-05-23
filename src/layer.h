@@ -215,6 +215,7 @@ NCNN_EXPORT Layer* create_layer_cpu(int index);
 NCNN_EXPORT Layer* create_layer_vulkan(int index);
 #endif // NCNN_VULKAN
 
+// 注册宏
 #define DEFINE_LAYER_CREATOR(name)                          \
     ::ncnn::Layer* name##_layer_creator(void* /*userdata*/) \
     {                                                       \
